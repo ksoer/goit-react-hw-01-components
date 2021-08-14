@@ -1,32 +1,33 @@
 
+import st from './profile.module.css'
 import PropTypes from 'prop-types'
 
 function Profile({name, tag, location, avatar, statsFollowers, statsViews, statsLikes}) {
   return (
-    <div class="profile">
-      <div class="description">
+    <div class={st.profile}>
+      <div class={st.description}>
         <img
           src={avatar}
           alt={name}
-          class="avatar"
+          class={st.avatar}
         />
-        <p class="name">{name}</p>
-        <p class="tag">@{tag}</p>
-          <p class="location">{location}</p>
+        <p class={st.name}>{name}</p>
+        <p class={st.tag}>@{tag}</p>
+          <p class={st.location}>{location}</p>
       </div>
 
-    <ul class="stats">
-      <li>
-        <span class="label">Followers</span>
-        <span class="quantity">{statsFollowers}</span>
+    <ul class={st.stats}>
+      <li class={st.list}>
+        <span class={st.label}>Followers</span>
+        <span class={st.quantity}>{statsFollowers}</span>
       </li>
-      <li>
-        <span class="label">Views</span>
-        <span class="quantity">{statsViews}</span>
+      <li class={st.list}>
+        <span class={st.label}>Views</span>
+        <span class={st.quantity}>{statsViews}</span>
       </li>
-      <li>
-        <span class="label">Likes</span>
-        <span class="quantity">{statsLikes}</span>
+      <li class={st.list}>
+        <span class={st.label}>Likes</span>
+        <span class={st.quantity}>{statsLikes}</span>
       </li>
     </ul>
 </div>
