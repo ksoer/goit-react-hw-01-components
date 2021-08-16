@@ -3,15 +3,15 @@ import st from './statistics.module.css'
 
 function Statistics({title, stats}){
     return(
-      <section class={st.statistics}>
+      <section className={st.statistics}>
       
-       {title.length > 0 && (<h2 class={st.title}>{title}</h2>
-       )}
-      <ul class={st.stat_list}>
+        {title && <h2 className={st.title}>{title}</h2>}
+        
+      <ul className={st.stat_list}>
         {stats.map(item=>(
-        <li class={st.item} key = {item.id}>
-          <span class={st.label}>{item.label}</span>
-          <span class={st.percentage}>{item.percentage}%</span>
+        <li className={st.item} key = {item.id}>
+          <span className={st.label}>{item.label}</span>
+          <span className={st.percentage}>{item.percentage}%</span>
         </li>))}
       </ul>
     </section>)
